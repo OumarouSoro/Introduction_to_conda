@@ -1,44 +1,40 @@
 # Commands used to create a new conda environment named qc
-`conda create -n qc`
-After the code has been run, we press y and then hit the enter key to proceed with the environment creation. 
+The code for creating a conda environment is **`conda create -n qc`**. After the code has been run, we press y and then hit the enter key to proceed with the environment creation. 
  # Package Plan location in my laptop for the new environment
-  environment location: /home/soro/miniconda3/envs/qc
- # To activate this environment, we use
-   `conda activate qc`
-# To deactivate an active environment, use
- `conda deactivate`
- Afer activation, we listed all the environment using the following command
- `conda env list` and below is the list of all my conda environments. The star means that the environment in with I am currently
+After the environment has been successfully created, it shows you where your new environment will be located on your laptop. In my case, the new environment location is: **/home/soro/miniconda3/envs/qc**
+### To activate this new environment that has been created, we use the following code:
+   **`conda activate qc`**
+### To deactivate an active environment, we use the code
+ **`conda deactivate`**. After activation, I listed all the environments using the command **`conda env list`** and below is the list of all my conda environments. The star means that the environment in which I am currently
 on is the one named qc
-### conda environments:
-base                     /home/soro/miniconda3
-new_env                  /home/soro/miniconda3/envs/new_env
-qc                    *  /home/soro/miniconda3/envs/qc
-I also listed all the environments present in the environment mamed qc using the following command` conda list` but there was nothing inside
-as I have not yet created any environment inside.
+##### My conda environments:
+* base                     /home/soro/miniconda3
+* new_env                  /home/soro/miniconda3/envs/new_env
+* qc                    *  /home/soro/miniconda3/envs/qc
+
+I also listed all the environments present in the environment mamed _qc_ using the following command **` conda list`** but there was nothing inside as I have not yet created any environment inside.
 I also checked the channels installed and their priority using the command 
-`conda config --get channels` and below are the results
---add channels 'defaults'   # lowest priority
---add channels 'bioconda'
---add channels 'conda-forge'   # highest priority
-# installing the packages fastqc and multiqc
-Before installing these packages, I first searched the available fastqc and multiqc version using the command  `conda search fastqc and conda search multiqc`
-After that I did the installion using the following commands  `conda install -c bioconda fastqc` for fastqc and  `conda install -c bioconda multiqc`
-for multiqc then I pressed y to proceed when needed. 
-# all environment list 
-### After installing fastqc
-The command used to list is `conda list` and the packages installed are listed below:
-# Name                    Version                   Build  Channel
-_libgcc_mutex             0.1                 conda_forge    conda-forge
-_openmp_mutex             4.5                       2_gnu    conda-forge
-alsa-lib                  1.2.9                hd590300_0    conda-forge
-bzip2                     1.0.8                h7f98852_4    conda-forge
-ca-certificates           2023.7.22            hbcca054_0    conda-forge
-cairo                     1.16.0            hbbf8b49_1016    conda-forge
-expat                     2.5.0                hcb278e6_1    conda-forge
-fastqc                    0.12.1               hdfd78af_0    bioconda
-font-ttf-dejavu-sans-mono 2.37                 hab24e00_0    conda-forge
-font-ttf-inconsolata      3.000                h77eed37_0    conda-forge
+**`conda config --get channels`** and below are the results:
+
+* --add channels 'defaults'   # lowest priority
+* --add channels 'bioconda'
+* --add channels 'conda-forge'   # highest priority
+# Installing the packages _fastqc_ and _multiqc_
+Before installing these packages, I first searched the available _fastqc_ and _multiqc_ version using the command  **_`conda search fastqc and conda search multiqc`_**
+After that I did the installion using the following commands  **`conda install -c bioconda fastqc`** for fastqc and  **`conda install -c bioconda multiqc`** for multiqc then I pressed y to proceed when needed. 
+# All environment list 
+ After installing fastqc, the command used to list is **`conda list`** and the packages installed are listed below:
+ # Name                   Version                   Build  Channel
+1. _libgcc_mutex             0.1                 conda_forge    conda-forge
+2. _openmp_mutex             4.5                       2_gnu    conda-forge
+3. alsa-lib                  1.2.9                hd590300_0    conda-forge
+4. bzip2                     1.0.8                h7f98852_4    conda-forge
+5. ca-certificates           2023.7.22            hbcca054_0    conda-forge
+6. cairo                     1.16.0            hbbf8b49_1016    conda-forge
+7. expat                     2.5.0                hcb278e6_1    conda-forge
+8. fastqc                    0.12.1               hdfd78af_0    bioconda
+9. font-ttf-dejavu-sans-mono 2.37                 hab24e00_0    conda-forge
+10. font-ttf-inconsolata      3.000                h77eed37_0    conda-forge
 font-ttf-source-code-pro  2.038                h77eed37_0    conda-forge
 font-ttf-ubuntu           0.83                 hab24e00_0    conda-forge
 fontconfig                2.14.2               h14ed4e7_0    conda-forge
